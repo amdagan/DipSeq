@@ -1,0 +1,39 @@
+DipSeq
+Sequencer based on a front panel PCB full of DIP switches and LED strips
+Split into control and DIP panels, 1 control panel can serve 1-4 DIP panels.
+
+DIP panel:
+- 10 HP
+- 2 columns of 32 DIP switches (4xDIP-8 piano style), column of LEDS in middle.
+- 4 jacks: 1 pulse out, 1 legato out per column
+
+DIP panel front to back PCB interconnect:
+- Problem is where to accommodate standard 0.1" thru-hole headers
+- 5 (mayyybe 6) pins under each DIP switch might be ok >> 40/48 pins 
+- signals: 32x step select, LEG_A, LEG_B (raw unbuffered versions), LED GND, signal GND?
+
+DIP back PCB to control panel interconnect:
+- try for compatibilty with other (CV) sequencer concepts
+- e.g.: 3 select lines (binary coded), 4 "group select" lines (1 out of 4
+  active at any given time), GND, logic/LED supplies?
+
+
+Control panel:
+- Speed pot
+- Sequence length pot
+- Loop / single-shot switch
+- Start button
+- Stop button
+- Clock in jack (normaled to internal clock)
+- Clock out jack (to sync other sequencers to DIPseq clock)
+- Start in jack (aka reset / restart on 1 / wake-up) - x2?
+- Stop in jack
+- "End of sequence" out jack
+- Loop in jack (normaled to loop/single-shot switch)
+- Sequence length CV in jack?
+- Staircase out jack?
+- Clock enable in jack?
+
+
+
+
